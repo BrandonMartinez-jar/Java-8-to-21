@@ -37,6 +37,6 @@ Predicate < Integer > predicate = ( i ) -> i < 0 ;
 
 - java.util.function.BiPredicate
 ```
-BiPredicate < String, Integer> biPredicate = ( str, len ) -> str.length() == len;
+BiPredicate < String, Integer > biPredicate = ( str, len ) -> str.length() == len;
 ```
 
