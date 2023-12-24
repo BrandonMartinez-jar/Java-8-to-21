@@ -5,21 +5,19 @@
 ```
 interface ILambda { void m(); }
 
-void preJavaEight(){
-    ILambda lambda = new ILambda() {
-        @Override public void m() { System.out.println("Pre Java 8 Lambda"); } }; }
+ILambda lambda = new ILambda() {
+    @Override public void m() { System.out.println("Pre Java 8 Lambda"); }
+}; 
         
-void javaEight
-        ( ){ ILambda lambda = () -> System.out.println("Java 8 Lambda"); }
+ILambda lambda = () -> System.out.println("Java 8 Lambda");
 ```
 
-### Implementación de L desde un método funcional
+### Implementación de Lambda desde un método funcional
 ```
 public static < T > boolean check
         ( T arg, Predicate < T > lambda ){ return lambda.test( arg ); }
         
-void methodLambda
-        ( ) { check(4, ( n ) -> n % 2 == 0 ); }
+check(4, ( n ) -> n % 2 == 0 );
 ```
 
 ### Implementación de Lambda custom desde una interfáz
@@ -27,14 +25,18 @@ void methodLambda
 ```
 interface IEvaluate < T > { boolean isNegative( T arg ); }
 
-void customLambda
-        ( ) { IEvaluate< Integer > predicate = ( i ) -> i < 0 ; }
+IEvaluate< Integer > predicate = ( i ) -> i < 0 ;
 ```
 
-### Implementación de Lambda custom desde una interfáz desde java.util.funcion.Predicate
+### Implementación de Lambda custom desde una interfáz desde:
 
+- java.util.function.Predicate
 ```
-void predicateLambda
-        ( ) { Predicate < Integer > predicate = ( i ) -> i < 0 ; }
+Predicate < Integer > predicate = ( i ) -> i < 0 ;
+```
+
+- java.util.function.BiPredicate
+```
+BiPredicate < String, Integer> biPredicate = ( str, len ) -> str.length() == len;
 ```
 
