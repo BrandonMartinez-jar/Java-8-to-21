@@ -40,3 +40,27 @@ Predicate < Integer > predicate = ( i ) -> i < 0 ;
 BiPredicate < String, Integer > biPredicate = ( str, len ) -> str.length() == len;
 ```
 
+- java.util.function.Supplier
+```
+Supplier < StringBuilder > supplier = ( ) -> new StringBuilder();
+```
+
+- java.util.function.Consumer
+```
+Consumer < String > consumer = ( arg ) -> System.out.println( arg );
+```
+
+- java.util.function.BiConsumer
+```
+BiConsumer < String, String > biConsumer = ( K, V ) -> System.out.println( "Key: " + K  + ", Value: " + V );
+```
+
+- java.util.function.Function
+```
+Function < String, Integer > function = ( arg ) -> arg.length(); 
+```
+
+- java.util.function.BiFunction
+```
+BiFunction < String, String, Integer > biFunction = ( arg1, arg2 ) -> arg1.length() + arg2.length();
+```
