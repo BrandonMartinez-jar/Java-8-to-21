@@ -25,42 +25,42 @@ check(4, ( n ) -> n % 2 == 0 );
 ```
 interface IEvaluate < T > { boolean isNegative( T arg ); }
 
-IEvaluate< Integer > predicate = ( i ) -> i < 0 ;
+IEvaluate< Integer > predicate = ( i ) -> boolean ;
 ```
 
 ### Implementación de Lambda custom desde una interfáz desde:
 
 - java.util.function.Predicate
 ```
-Predicate < Integer > predicate = ( i ) -> i < 0 ;
+Predicate < Integer > predicate = ( i ) -> boolean ;
 ```
 
 - java.util.function.BiPredicate
 ```
-BiPredicate < String, Integer > biPredicate = ( str, len ) -> str.length() == len;
+BiPredicate < String, Integer > biPredicate = ( str, len ) -> boolean ;
 ```
 
 - java.util.function.Supplier
 ```
-Supplier < StringBuilder > supplier = ( ) -> new StringBuilder();
+Supplier < StringBuilder > supplier = ( ) -> new StringBuilder() ;
 ```
 
 - java.util.function.Consumer
 ```
-Consumer < String > consumer = ( arg ) -> System.out.println( arg );
+Consumer < String > consumer = ( arg ) -> void ;
 ```
 
 - java.util.function.BiConsumer
 ```
-BiConsumer < String, String > biConsumer = ( K, V ) -> System.out.println( "Key: " + K  + ", Value: " + V );
+BiConsumer < String, String > biConsumer = ( K, V ) -> void ;
 ```
 
 - java.util.function.Function
 ```
-Function < String, Integer > function = ( arg ) -> arg.length(); 
+Function < String, Integer > function = ( arg ) -> Integer ; 
 ```
 
 - java.util.function.BiFunction
 ```
-BiFunction < String, String, Integer > biFunction = ( arg1, arg2 ) -> arg1.length() + arg2.length();
+BiFunction < String, String, Integer > biFunction = ( arg1, arg2 ) -> Integer ;
 ```
